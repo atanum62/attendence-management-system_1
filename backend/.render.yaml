@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: attendence-backend
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn backend.wsgi:application
+    autoDeploy: true
+    envVars:
+      - key: DEBUG
+        value: False
+      - key: SECRET_KEY
+        value: django-insecure-phwd*nettov-2(1km7=*41m*y%d$*-)8rzng3ng+h$h%^*d@1+
